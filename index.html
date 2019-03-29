@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>My first three.js app</title>
+		<style>
+			body {position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            
+            background-color: rgb(238, 237, 237) }
+
+
+
+#idh1{
+
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    font: 19px;
+    color: black;
+}
+		</style>
+	</head><script src="jquery-3.3.1.min.js"></script>
+	<body>
+        
+    <button  id="idbutonok">ok</button>
+
+
+    <h1 id="idh1">este h1 </h1>
+		<script>
+		
+        $("#idbutonok").click(function(){
+    document.getElementById("idh1").innerHTML="data";
+  $.post("http://ajaxhtmlphp.epizy.com/", function(data, status){
+    alert("Data: " + data + "\nStatus: " + status);
+
+    document.getElementById("idh1").innerHTML=data;
+  });
+});
+        </script> 
+        
+
+
+        
+	</body>
+</html>
